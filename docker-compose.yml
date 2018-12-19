@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  parser:
+    build:
+      context: ./parser
+      target: base
+    ports:
+      - "8001:8001"
+    command: ["go", "run", "main.go"]
+    volumes:
+      - ./parser:/go/src/parser
+      - /go/src/parser/vendor/
