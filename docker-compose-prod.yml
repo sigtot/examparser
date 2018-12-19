@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  parser:
+    build:
+      context: ./parser
+      target: final
+    ports:
+      - "8001:8001"
+    command: ["./main"]
